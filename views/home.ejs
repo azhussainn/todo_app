@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title%></title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+     integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <h3  id = "mainHeading">
+        TODO App 
+    </h3>
+    <form action="/createNote" method="POST">
+        <div id = "desc">
+            <label for="description" class = "myLabels">DESCRIPTION</label>
+            <br>
+            <textarea rows="2" name = "description"  class = "myInput" required placeholder="What do you need to do"></textarea>
+        </div>
+
+        <div id = "CategoryDateDiv">
+            <div id = "category">
+                <label for="category" class = "myLabels">CATEGORY</label>
+                <br>
+                <select name="category" required class = "myInput">
+                    <option selected disabled hidden>Choose a category</option>
+                    <option value= "Personal">Personal</option>
+                    <option value= "Work">Work</option>
+                    <option value="School">School</option>
+                    <option value="Cleaning">Cleaning</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div id = "date">
+                <label for="date" class = "myLabels">DUE DATE</label>
+                <br>
+                <input type="date" name="date" required class = "myInput" >
+            </div>
+        </div>
+        <div id = "btnDiv">
+            <button id = "addBtn" type="submit"><i class="fas fa-plus"></i>ADD TASK</button>
+            <button id = "delBtn" type="submit"><i class="fas fa-trash-alt"></i>DELETE TASKS</button>
+        </div>
+    </form>
+</body>
+</html>

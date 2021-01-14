@@ -1,0 +1,110 @@
+body{
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#mainHeading{
+    text-align: center;
+    font-size: 20px;
+    border-bottom: 1px solid rgb(209, 161, 161);
+    margin-bottom: 0;
+}
+
+#desc{
+    border-bottom: 1px solid rgb(209, 161, 161);
+}
+
+
+.myLabels{
+    font-size: 10px;
+    margin-left: 8px;
+}
+
+.myInput{
+    border: none;
+    outline: none;
+    margin-left: 15px;
+}
+
+#desc{
+    width: 100%;
+}
+
+#desc:hover{
+    background-color: rgb(243, 243, 243);
+}
+
+#desc textarea{
+    width: 85%;
+    margin-left: 8px;
+}
+
+#CategoryDateDiv{
+    display: flex;
+    border-bottom: 1px solid rgb(209, 161, 161);
+    margin-bottom: 8px;
+    line-height: 26px;
+}
+
+#category{
+    width: 50%;
+    border-right: 1px solid rgb(209, 161, 161);;
+}
+
+#category:hover{
+    background-color: rgb(243, 243, 243);
+}
+
+#date{
+    width: 50%;
+}
+
+#date:hover{
+    background-color: rgb(243, 243, 243);
+}
+
+select{
+    width: 90%;
+    text-indent: 15px;
+}
+option{
+    font-style: italic;
+}
+
+#addBtn{
+    background-color: rgb(65, 51, 88);
+    color: white;
+    
+}
+
+#delBtn{
+    background-color: rgb(245, 151, 29);
+    color: rgb(66, 42, 85);
+}
+
+#addBtn:hover{
+    background-color: rgb(83, 63, 116);
+}
+
+#delBtn:hover{
+    background-color: rgb(253, 155, 26);
+}
+
+button{
+    width: 150px;
+    height: 45px;
+    font-size: 12px;
+    margin-right: 2px;
+}
+
+#btnDiv{
+    height: 55px;
+    border-bottom: 1px solid rgb(209, 161, 161);
+    display: flex;
+    justify-content: center;
+}
+
+i{
+    margin-right: 10px;
+    font-size: 16px;
+}
