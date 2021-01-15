@@ -11,9 +11,9 @@
 </head>
 <body>
     <h3  id = "mainHeading">
-        TODO App 
+        TODO App
     </h3>
-    <form action="/createNote" method="POST">
+    <form action="/Note/Create" method="POST">
         <div id = "desc">
             <label for="description" class = "myLabels">DESCRIPTION</label>
             <br>
@@ -39,10 +39,42 @@
                 <input type="date" name="date" required class = "myInput" >
             </div>
         </div>
-        <div id = "btnDiv">
-            <button id = "addBtn" type="submit"><i class="fas fa-plus"></i>ADD TASK</button>
-            <button id = "delBtn" type="submit"><i class="fas fa-trash-alt"></i>DELETE TASKS</button>
+        <div class = "btnDiv">
+            <button id = "addBtn" type="submit"><i class="fas fa-plus btnI"></i>ADD TASK</button>
         </div>
     </form>
+    <form action="/Note/Delete" method="POST" id = "form2">
+        <button id = "delBtn" type="submit"><i class="fas fa-trash-alt btnI"></i>DELETE TASKS</button>
+        <% for (let i of notes_list){%>
+            <div class = "myNotes">
+                    <div id = "mainText">
+                        <div id= "limitSize">
+                            <input type="checkbox" name="id" value= <%=i._id%> >
+                            <label for="note" class = "newDesc" id = "description">
+                                <%= i.description%>
+                            </label>
+                        </div>
+                        <label for="id" class = "newDesc">
+                            <i class="fas fa-calendar-check cal"></i>
+                            <%= i.date.toString().slice(4, 15) %>
+                        </label>
+                    </div>
+                    <div id = "categoryDivs">
+                        <div class = "category">
+                            <label for="id" class = "newDesc catText">
+                                <%= i.category%>
+                            </label>
+                        </div>
+                        <div>
+                            <a href="/Note/Edit">
+                                <i id = "editor" class="fas fa-edit" name = "id" value = <%=i._id%> ></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+            </div>
+        <%}%>
+    </form>
+
 </body>
 </html>

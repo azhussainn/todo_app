@@ -16,7 +16,7 @@ body{
 
 
 .myLabels{
-    font-size: 10px;
+    font-size: 12px;
     margin-left: 8px;
 }
 
@@ -71,15 +71,24 @@ option{
     font-style: italic;
 }
 
+.btnDiv{
+    height: 55px;
+    position: relative;
+}
+
 #addBtn{
     background-color: rgb(65, 51, 88);
     color: white;
-    
+    position: relative;
+    left: 35%;
 }
 
 #delBtn{
     background-color: rgb(245, 151, 29);
     color: rgb(66, 42, 85);
+    position: relative;
+    top: -11px;
+    left : 50%
 }
 
 #addBtn:hover{
@@ -94,17 +103,149 @@ button{
     width: 150px;
     height: 45px;
     font-size: 12px;
-    margin-right: 2px;
 }
 
-#btnDiv{
-    height: 55px;
-    border-bottom: 1px solid rgb(209, 161, 161);
-    display: flex;
-    justify-content: center;
-}
 
 i{
     margin-right: 10px;
     font-size: 16px;
 }
+
+.myNotes{
+    height: 44px;
+    border-top: 1px solid rgb(209, 161, 161);
+    padding: 20px 10px 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px 0 20px;
+}
+
+
+.cal{
+    margin-left: 30px;
+    font-size: 20px;
+    color: rgb(107, 107, 107);
+    padding-top: 4px;
+}
+
+.category{
+    margin-right: 40px;
+    height: 30px;
+    background-color: rgb(195, 169, 245);
+    width: 80px;
+    border: 1px solid rgb(88, 86, 86);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.myNotes:hover{
+    background-color: rgb(243, 243, 243);
+}
+
+#limitSize{
+    max-height: 20px;
+    max-width: 400px;
+    overflow: hidden;
+}
+
+#form2{
+    margin-top: -44px;
+}
+
+#description::after{
+    content: "...";
+}
+
+
+#categoryDivs{
+    display: flex;
+}
+
+#editor{
+    margin-top: 7px;
+}
+
+#mainText{
+    width: 60%;
+}
+
+@media only screen and (max-width: 1004px) {
+    #addBtn{
+        left : 25%;
+    }
+    
+    #delBtn{
+        left : 53%;
+    }
+}
+
+@media only screen and (max-width: 602px) {
+    button{
+        width: 100px;
+        height: 45px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+
+    #mainHeading{
+        font-size: 14px;
+    }
+    button{
+        width: 50px;
+        height: 30px;
+        font-size: 8px;
+    }
+
+    .btnI{
+        margin-right: 0px;
+        font-size: 0px;
+    }
+
+    select{
+        width: 80%;
+        text-indent: 2px;
+        font-size: 10px;
+    }
+    option{
+        font-style: italic;
+    }
+    .myNotes{
+        height: 50px;
+        overflow: hidden;
+    }
+    .newDesc{
+        max-height: 25px;
+        overflow: hidden;
+    }
+    .cal{
+        margin-left: 18px;
+        font-size: 12px;
+    }
+    .category{
+        display: none;
+    }
+    .newDesc{
+        font-size: 10px;
+        padding-bottom: 10px;
+    }
+    .myInput{
+        margin-left: 2px;
+        font-size: 10px;
+    }
+    
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        cursor: pointer;
+        border-radius: 4px;
+        margin-right: 32px;
+        opacity: 0.6;
+        filter: invert(-1);
+    }
+}
+

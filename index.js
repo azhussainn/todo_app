@@ -23,6 +23,9 @@ app.set('views', './views')
 // setting the static files
 app.use(express.static('assets'));
 
+
+
+
 app.listen(port, function(err){
     if(err){
         console.log(`Error in running the server: ${err}`);
