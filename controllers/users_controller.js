@@ -64,7 +64,7 @@ module.exports.updateNote = function(req, res){
         });
         return res.redirect('/');
     }
-    return res.send("<h1>No data send</h1>");
+    return res.end('../views/home.ejs');
 }
 
 module.exports.goBack = function(req, res){
