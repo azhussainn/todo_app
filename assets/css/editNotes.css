@@ -1,3 +1,83 @@
 body{
-    background-color: aqua;
+    background-image: linear-gradient(183deg, #D9AFD9 0%, #97D9E1 100%);
+    margin: 0;
+}
+
+section{
+    margin: 10px;
+}
+#fullDescription h3{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+##fullDescription p{
+    text-align: justify;
+}
+.mainText{
+    display: flex;
+}
+
+.mainText p{
+    margin-top: 25px;
+}
+
+#mainHeading{
+    font-size: 18px;
+    font-family: monospace;
+    text-align: center;
+}
+
+.myInput, .myLabels{
+    width: 50%;
+    padding: 20px;
+}
+
+button{
+    width: 100%;
+    height: 30px;
+    margin-top: 6px;
+}
+
+.small{
+    width: 55%;
+}
+
+#add{
+    background-color: rgb(230, 150, 47);
+    color: rgb(66, 42, 85);
+}
+
+#add:hover{
+    background-color: rgb(255, 145, 0);
+}
+
+#cancel{
+    background-color: rgb(65, 51, 88);
+    color: white;
+}
+
+#cancel:hover{
+    background-color: rgb(108, 102, 121);
+}
+
+@media only screen and (max-width: 602px) {
+    #fullDescription h3{
+        font-size: 14px;
+    }
+    .mainText p{
+        margin-top: 18px;
+    }
+    
+    #mainHeading{
+        font-size: 14px;
+    }
+    
+    .myInput, .myLabels{
+        padding: 12px;
+        font-size: 10px;
+    }
+    #mainHeading h2{
+        font-size: 16px;
+    }
 }

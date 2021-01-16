@@ -7,6 +7,64 @@
     <link rel="stylesheet" href="/css/editNotes.css">
 </head>
 <body>
-    <h1>Edit page under construction!!</h1>
+    <section>
+        <div id = "fullDescription">
+            <h3>DESCRIPTION</h3>
+            <p>
+                <%= note.description%>
+            </p>
+
+            <div class = "mainText">
+                <h3>CATEGORY:</h3>
+                <p> <%= note.category%></p>
+            </div>
+
+            <div class = "mainText">
+                <h3>DATE:</h3>
+                <p><%= note.date.toString().slice(4, 15)%></p>
+            </div>
+        </div>
+    </section>
+
+    <section id = "secSection">
+        <div id = "mainHeading">
+            <h2>
+                Edit Note:
+            </h2>
+        </div>
+    
+        <form action="/Note/Update/?id=<%=note._id%>" method="POST">
+            <div id = "desc">
+                <label for="description" class = "myLabels">DESCRIPTION</label>
+                <br>
+                <textarea rows="2" name = "description"  class = "myInput" placeholder="What do you need to do"></textarea>
+            </div>
+            <div id = "category">
+                <label for="category" class = "myLabels">CATEGORY</label>
+                <br>
+                <select name="category" class = "myInput small">
+                    <option selected disabled hidden>Choose a category</option>
+                    <option value= "Personal">Personal</option>
+                    <option value= "Work">Work</option>
+                    <option value="School">School</option>
+                    <option value="Cleaning">Cleaning</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div id = "date">
+                <label for="date" class = "myLabels">DUE DATE</label>
+                <br>
+                <input type="date" name="date" class = "myInput" >
+            </div>
+            <div class = "btnDiv">
+                <button type="submit" id = "add"><i class="fas fa-plus"></i>SAVE</button>
+            </div>
+        </form>
+        <div class = "btnDiv">
+            <button id = "cancel" formaction = "/" type="submit"><i class="fas fa-plus"></i>CANCEL</button>
+        </div>
+    </section>
+    
+
 </body>
 </html>
