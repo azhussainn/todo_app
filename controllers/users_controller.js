@@ -48,21 +48,25 @@ module.exports.editNote = function(req, res){
 };
 
 module.exports.updateNote = function(req, res){
-    let k = Object.keys(req.body);
-    let finalObject = {}
-    for(let prop of k){
-        if(req.body[prop] != ""){
-            finalObject[prop] = req.body[prop];
+    let  finalObj = {};
+    let keys = Object.keys(req.body);
+    for(key of keys){
+        if(req.body[key] != ""){
+            finalObj[key] = req.body[key];
         };
-    }
-    if(Object.keys(finalObject).length > 0){
-        Note.findByIdAndUpdate(req.query.id, finalObject, {new: true}, function(err){
+    };
+    if(Object.keys(finalObj).length > 0 ){
+        Note.findOneAndUpdate({_id: req.query.id}, finalObj ,function(err, data){
             if(err){
-                console.log('error in updating an object in database');
-                return res.redirect('/');;
+                console.log("Something wrong when updating data!");
+                return;
             }
-            return res.redirect('/');
-        })
+        });
+        return res.redirect('/');
     }
+    return res.send("<h1>No data send</h1>");
+}
+
+module.exports.goBack = function(req, res){
     return res.redirect('/');
-};
+}
